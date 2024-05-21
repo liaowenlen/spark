@@ -160,7 +160,7 @@
     <commons.math3.version>3.4.1</commons.math3.version>
     <!-- managed up from 3.2.1 for SPARK-11652 -->
     <commons.collections.version>3.2.2</commons.collections.version>
-    <scala.version>2.12.15</scala.version>
+    <scala.version>2.12.17</scala.version>
     <scala.binary.version>2.12</scala.binary.version>
     <scalatest-maven-plugin.version>2.0.2</scalatest-maven-plugin.version>
     <scalafmt.parameters>--test</scalafmt.parameters>
@@ -181,7 +181,7 @@
     <!-- org.apache.commons/commons-pool2/-->
     <commons-pool2.version>2.6.2</commons-pool2.version>
     <datanucleus-core.version>4.1.17</datanucleus-core.version>
-    <guava.version>14.0.1</guava.version>
+    <guava.version>27.0-jre</guava.version>
     <janino.version>3.0.16</janino.version>
     <jersey.version>2.34</jersey.version>
     <joda.version>2.10.10</joda.version>
@@ -2655,7 +2655,7 @@
               <compilerPlugin>
                 <groupId>com.github.ghik</groupId>
                 <artifactId>silencer-plugin_${scala.version}</artifactId>
-                <version>1.7.6</version>
+                <version>1.7.13</version>
               </compilerPlugin>
             </compilerPlugins>
           </configuration>
@@ -3366,11 +3366,11 @@
     <profile>
       <id>scala-2.12</id>
       <properties>
-        <!-- 
+        <!--
          SPARK-34774 Add this property to ensure change-scala-version.sh can replace the public `scala.version`
-         property correctly. 
+         property correctly.
         -->
-        <scala.version>2.12.15</scala.version>
+        <scala.version>2.12.17</scala.version>
       </properties>
       <build>
         <pluginManagement>
